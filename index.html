@@ -4,33 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags (Fast Indexing & SEO) -->
+    <!-- Primary Meta Tags -->
     <title>Mohammad Ayub Janz | Web Developer & Founder of Janz Education</title>
     <meta name="title" content="Mohammad Ayub Janz | MD AYUB JANZ - Web Developer">
-    <meta name="description" content="Official portfolio of Mohammad Ayub Janz (MD AYUB JANZ). Founder of Janz Education, a passionate web developer from Vadun Nadi, Bhata (Balotra), Rajasthan.">
+    <meta name="description" content="Official portfolio of Mohammad Ayub Janz. Founder of Janz Education, a passionate web developer and student from Vadun Nadi, Bhata (Balotra), Rajasthan.">
     <meta name="keywords" content="Mohammad Ayub Janz, MD AYUB JANZ, Janz Education, Web Developer Rajasthan, Vadun Nadi Bhata, JanzTales, SEO Expert, Student Portal Developer">
     <meta name="author" content="Mohammad Ayub Janz">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mdayubjanz.github.io/">
     <meta property="og:title" content="Mohammad Ayub Janz | Founder of Janz Education">
     <meta property="og:description" content="Building digital platforms that help students learn better. Explore the portfolio and projects of Mohammad Ayub Janz.">
     <meta property="og:image" content="profile.png"> 
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mdayubjanz.github.io/">
-    <meta property="twitter:title" content="Mohammad Ayub Janz | Web Developer">
-    <meta property="twitter:description" content="Founder of Janz Education & passionate web developer from Vadun Nadi, Bhata (Balotra), Rajasthan.">
-    <meta property="twitter:image" content="64160.jpg">
-
-    <!-- Canonical & Robots -->
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mdayubjanz.github.io/">
-
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Font Awesome (For Social Icons) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* CSS Reset */
@@ -81,14 +71,16 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
+        /* NAME ON ONE LINE FIX */
         .name {
-            font-size: 3.5rem;
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+            white-space: nowrap; /* Forces text on one line */
             color: #ffffff;
             margin-bottom: 10px;
             line-height: 1.2;
         }
         .role {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #cbd5e1;
             margin-bottom: 20px;
         }
@@ -171,8 +163,9 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
         .skill-card {
             background: rgba(255, 255, 255, 0.05);
@@ -196,6 +189,36 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Footer & Social Links */
+        .footer {
+            background-color: #050505;
+            padding: 40px 10%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        .social-icon {
+            color: #cbd5e1;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+        .copyright {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero {
@@ -214,7 +237,10 @@
                 margin-bottom: 30px;
             }
             .name {
-                font-size: 2.5rem;
+                font-size: 1.6rem; /* Ensures it perfectly fits one line on mobile */
+            }
+            .role {
+                font-size: 1.3rem;
             }
             section {
                 padding: 60px 5%;
@@ -228,6 +254,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <p class="greeting">Hello, I'm</p>
+            <!-- Name strictly on one line -->
             <h1 class="name">Mohammad Ayub Janz</h1>
             <h2 class="role">And I'm a <span class="typing-text"></span></h2>
             <p class="bio">
@@ -241,7 +268,8 @@
         
         <div class="hero-image-container">
             <div class="glass-card">
-                <img src="64160.jpg" alt="Mohammad Ayub Janz" class="profile-pic">
+                <!-- Using profile.png as requested -->
+                <img src="profile.png" alt="Mohammad Ayub Janz" class="profile-pic">
             </div>
         </div>
     </section>
@@ -257,7 +285,7 @@
 
     <!-- SKILLS SECTION -->
     <section id="skills">
-        <h2 class="section-title">My <span>Skills</span></h2>
+        <h2 class="section-title">Professional <span>Skills</span></h2>
         <div class="skills-grid">
             <div class="skill-card"><div class="skill-name">HTML 5</div></div>
             <div class="skill-card"><div class="skill-name">CSS 3</div></div>
@@ -269,13 +297,26 @@
         </div>
     </section>
 
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://instagram.com/md_ayub_janj" target="_blank" class="social-icon" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/md.ayubjanj" target="_blank" class="social-icon" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+        </div>
+        <p class="copyright">2026 &copy;MD AYUB JANZ All Rights Reserved</p>
+    </footer>
+
     <!-- Typing Animation JS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed(".typing-text", {
-            strings: ["Web Developer.", "Founder of Janz Education.", "SEO Expert.", "Student."],
-            typeSpeed: 50,
-            backSpeed: 30,
+            strings: ["Student.", "Web Developer.", "Founder of Janz Education."],
+            typeSpeed: 60,   /* Medium Speed */
+            backSpeed: 35,   /* Medium Return Speed */
             loop: true
         });
     </script>
