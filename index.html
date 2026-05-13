@@ -18,8 +18,8 @@
     <meta property="og:description" content="Building digital platforms that help students learn better. Explore the portfolio and projects of Mohammad Ayub Janz.">
     <meta property="og:image" content="profile.png"> 
 
-    <!-- Google Fonts & Font Awesome (For Social Icons) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts & Font Awesome (For Icons) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -45,10 +45,11 @@
             padding: 80px 10%;
         }
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #ffffff;
             margin-bottom: 40px;
             text-align: center;
+            font-weight: 700;
         }
         .section-title span {
             color: #38bdf8;
@@ -71,10 +72,9 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
-        /* NAME ON ONE LINE FIX */
         .name {
             font-size: clamp(1.8rem, 4vw, 3.5rem);
-            white-space: nowrap; /* Forces text on one line */
+            white-space: nowrap; 
             color: #ffffff;
             margin-bottom: 10px;
             line-height: 1.2;
@@ -83,6 +83,7 @@
             font-size: 1.6rem;
             color: #cbd5e1;
             margin-bottom: 20px;
+            font-weight: 500;
         }
         .typing-text {
             color: #38bdf8;
@@ -146,12 +147,13 @@
 
         /* About Section */
         .about-content {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            border-left: 4px solid #38bdf8;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .about-content p {
             color: #cbd5e1;
@@ -159,63 +161,86 @@
             line-height: 1.8;
             margin-bottom: 15px;
         }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        .about-content p:last-child {
+            margin-bottom: 0;
         }
-        .skill-card {
+
+        /* Skills Section (Compact Pill Design) */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .skill-badge {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 12px 25px;
+            border-radius: 50px; 
+            font-size: 1rem;
+            font-weight: 500;
+            color: #e2e8f0;
             transition: all 0.3s ease;
-            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: default;
         }
-        .skill-card:hover {
-            transform: translateY(-5px);
+        .skill-badge i {
+            color: #38bdf8;
+            font-size: 1.2rem;
+        }
+        .skill-badge:hover {
+            background: rgba(56, 189, 248, 0.1);
             border-color: #38bdf8;
+            transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
-            background: rgba(255, 255, 255, 0.08);
-        }
-        .skill-name {
-            font-weight: 600;
             color: #ffffff;
-            font-size: 1.1rem;
-            font-family: 'Poppins', sans-serif;
         }
 
-        /* Footer & Social Links */
+        /* Footer & Colorful Social Links */
         .footer {
             background-color: #050505;
-            padding: 40px 10%;
+            padding: 30px 10% 20px; /* Reduced top padding to move it up */
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         .social-links {
             display: flex;
             justify-content: center;
+            flex-wrap: nowrap; /* Ensures all icons stay in one line */
             gap: 25px;
+            margin-top: -15px; /* Thoda upar khiskaya */
             margin-bottom: 20px;
         }
         .social-icon {
-            color: #cbd5e1;
-            font-size: 1.8rem;
+            font-size: 2.2rem; /* Thoda bada for Real Logo feel */
             transition: all 0.3s ease;
             text-decoration: none;
+            display: inline-block;
         }
+        
+        /* Real Brand Colors */
+        .social-icon.fb { color: #1877F2; }
+        .social-icon.insta { 
+            /* Real Instagram Gradient */
+            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .social-icon.tg { color: #229ED9; }
+        .social-icon.yt { color: #FF0000; }
+
         .social-icon:hover {
-            color: #38bdf8;
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.1); /* Hover animation */
+            filter: drop-shadow(0 4px 8px rgba(255,255,255,0.1));
         }
+        
         .copyright {
             color: #64748b;
             font-size: 0.95rem;
-            font-family: 'Inter', sans-serif;
             letter-spacing: 0.5px;
         }
 
@@ -237,13 +262,21 @@
                 margin-bottom: 30px;
             }
             .name {
-                font-size: 1.6rem; /* Ensures it perfectly fits one line on mobile */
+                font-size: 1.6rem; 
             }
             .role {
                 font-size: 1.3rem;
             }
             section {
                 padding: 60px 5%;
+            }
+            .about-content {
+                text-align: center;
+                border-left: none;
+                border-top: 4px solid #38bdf8;
+            }
+            .social-links {
+                gap: 20px; /* Thoda gap adjust kiya mobile ke liye */
             }
         }
     </style>
@@ -254,7 +287,6 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <p class="greeting">Hello, I'm</p>
-            <!-- Name strictly on one line -->
             <h1 class="name">Mohammad Ayub Janz</h1>
             <h2 class="role">And I'm a <span class="typing-text"></span></h2>
             <p class="bio">
@@ -268,7 +300,6 @@
         
         <div class="hero-image-container">
             <div class="glass-card">
-                <!-- Using profile.png as requested -->
                 <img src="profile.png" alt="Mohammad Ayub Janz" class="profile-pic">
             </div>
         </div>
@@ -286,25 +317,35 @@
     <!-- SKILLS SECTION -->
     <section id="skills">
         <h2 class="section-title">Professional <span>Skills</span></h2>
-        <div class="skills-grid">
-            <div class="skill-card"><div class="skill-name">HTML 5</div></div>
-            <div class="skill-card"><div class="skill-name">CSS 3</div></div>
-            <div class="skill-card"><div class="skill-name">JavaScript</div></div>
-            <div class="skill-card"><div class="skill-name">Firebase</div></div>
-            <div class="skill-card"><div class="skill-name">SEO</div></div>
-            <div class="skill-card"><div class="skill-name">PHP</div></div>
-            <div class="skill-card"><div class="skill-name">UI Design</div></div>
+        <div class="skills-container">
+            <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML 5</span>
+            <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS 3</span>
+            <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-badge"><i class="fa-solid fa-fire"></i> Firebase</span>
+            <span class="skill-badge"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO</span>
+            <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-badge"><i class="fa-solid fa-pen-nib"></i> UI Design</span>
         </div>
     </section>
 
     <!-- FOOTER SECTION -->
     <footer class="footer">
         <div class="social-links">
-            <a href="https://instagram.com/md_ayub_janj" target="_blank" class="social-icon" title="Instagram">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/md.ayubjanj" target="_blank" class="social-icon fb" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/md_ayub_janj" target="_blank" class="social-icon insta" title="Instagram">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/md.ayubjanj" target="_blank" class="social-icon" title="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
+            <!-- Telegram (Link Empty) -->
+            <a href="#" target="_blank" class="social-icon tg" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+            <!-- YouTube (Link Empty) -->
+            <a href="#" target="_blank" class="social-icon yt" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
             </a>
         </div>
         <p class="copyright">2026 &copy;MD AYUB JANZ All Rights Reserved</p>
@@ -315,8 +356,8 @@
     <script>
         var typed = new Typed(".typing-text", {
             strings: ["Student.", "Web Developer.", "Founder of Janz Education."],
-            typeSpeed: 60,   /* Medium Speed */
-            backSpeed: 35,   /* Medium Return Speed */
+            typeSpeed: 60,
+            backSpeed: 35,
             loop: true
         });
     </script>
