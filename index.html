@@ -7,28 +7,24 @@
     <!-- Primary Meta Tags -->
     <title>Mohammad Ayub Janz | Web Developer & Founder of Janz Education</title>
     <meta name="title" content="Mohammad Ayub Janz | MD AYUB JANZ - Web Developer">
-    <meta name="description" content="Official portfolio of Mohammad Ayub Janz. Founder of Janz Education, a passionate web developer and student from Vadun Nadi, Bhata (Balotra), Rajasthan.">
-    <meta name="keywords" content="Mohammad Ayub Janz, MD AYUB JANZ, Janz Education, Web Developer Rajasthan, Vadun Nadi Bhata, JanzTales, SEO Expert, Student Portal Developer">
+    <meta name="description" content="Official portfolio of Mohammad Ayub Janz. Founder of Janz Education, Web Developer, and Silver Play Button Holder with 170K+ YouTube Subscribers.">
+    <meta name="keywords" content="Mohammad Ayub Janz, MD AYUB JANZ, Janz Education, Web Developer Rajasthan, JanzTales, Janj Creative Studio, Silver Play Button">
     <meta name="author" content="Mohammad Ayub Janz">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mdayubjanz.github.io/">
     <meta property="og:title" content="Mohammad Ayub Janz | Founder of Janz Education">
-    <meta property="og:description" content="Building digital platforms that help students learn better. Explore the portfolio and projects of Mohammad Ayub Janz.">
+    <meta property="og:description" content="Explore the portfolio, projects, and achievements of Mohammad Ayub Janz.">
     <meta property="og:image" content="profile.png"> 
 
-    <!-- Google Fonts & Font Awesome (For Icons) -->
+    <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0a0a0a;
@@ -36,14 +32,52 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+
+        /* NAVBAR (NEW) */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav-logo span { color: #38bdf8; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #38bdf8; }
+        .menu-btn {
+            display: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
         }
 
         /* Section Globals */
-        section {
-            padding: 80px 10%;
-        }
+        section { padding: 100px 10% 80px; } /* Top padding adjusted for Navbar */
         .section-title {
             font-size: 2.2rem;
             color: #ffffff;
@@ -51,9 +85,7 @@
             text-align: center;
             font-weight: 700;
         }
-        .section-title span {
-            color: #38bdf8;
-        }
+        .section-title span { color: #38bdf8; }
 
         /* Hero Section */
         .hero {
@@ -63,225 +95,143 @@
             min-height: 100vh;
             background: radial-gradient(circle at top left, #1e293b, #0a0a0a);
         }
-        .hero-content {
-            max-width: 50%;
-        }
-        .greeting {
-            color: #38bdf8;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .name {
-            font-size: clamp(1.8rem, 4vw, 3.5rem);
-            white-space: nowrap; 
-            color: #ffffff;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        .role {
-            font-size: 1.6rem;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-        .typing-text {
-            color: #38bdf8;
-        }
-        .bio {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        .btn-primary {
-            background-color: #38bdf8;
-            color: #0a0a0a;
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
-        }
-        .btn-primary:hover {
-            background-color: #0ea5e9;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: #38bdf8;
-            border: 2px solid #38bdf8;
-        }
-        .btn-secondary:hover {
-            background-color: rgba(56, 189, 248, 0.1);
-            transform: translateY(-2px);
-        }
+        .hero-content { max-width: 50%; }
+        .greeting { color: #38bdf8; font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
+        .name { font-size: clamp(1.8rem, 4vw, 3.5rem); white-space: nowrap; color: #ffffff; margin-bottom: 10px; line-height: 1.2; }
+        .role { font-size: 1.6rem; color: #cbd5e1; margin-bottom: 20px; font-weight: 500; }
+        .typing-text { color: #38bdf8; }
+        .bio { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; }
+        .hero-buttons { display: flex; gap: 15px; }
+        .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;}
+        .btn-primary { background-color: #38bdf8; color: #0a0a0a; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4); }
+        .btn-primary:hover { background-color: #0ea5e9; transform: translateY(-2px); }
+        .btn-secondary { background-color: transparent; color: #38bdf8; border: 2px solid #38bdf8; }
+        .btn-secondary:hover { background-color: rgba(56, 189, 248, 0.1); transform: translateY(-2px); }
         
-        /* Glassmorphism Image Card */
-        .hero-image-container {
-            max-width: 40%;
-        }
+        .hero-image-container { max-width: 40%; }
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px;
+            border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
-        .profile-pic {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 15px;
-            display: block;
-        }
+        .profile-pic { width: 100%; max-width: 350px; border-radius: 15px; display: block; }
 
-        /* About Section */
+        /* About & Skills */
         .about-content {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 40px;
-            border-radius: 15px;
-            border-left: 4px solid #38bdf8;
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02); padding: 40px; border-radius: 15px;
+            border-left: 4px solid #38bdf8; text-align: left; max-width: 800px; margin: 0 auto;
         }
-        .about-content p {
-            color: #cbd5e1;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        .about-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Skills Section (Compact Pill Design) */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .about-content p { color: #cbd5e1; font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px; }
+        .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; margin: 0 auto; }
         .skill-badge {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 12px 25px;
-            border-radius: 50px; 
-            font-size: 1rem;
-            font-weight: 500;
-            color: #e2e8f0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: default;
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 12px 25px; border-radius: 50px; font-weight: 500; color: #e2e8f0;
+            display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; cursor: default;
         }
-        .skill-badge i {
-            color: #38bdf8;
-            font-size: 1.2rem;
-        }
-        .skill-badge:hover {
-            background: rgba(56, 189, 248, 0.1);
-            border-color: #38bdf8;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
-            color: #ffffff;
-        }
+        .skill-badge i { color: #38bdf8; font-size: 1.2rem; }
+        .skill-badge:hover { background: rgba(56, 189, 248, 0.1); border-color: #38bdf8; transform: translateY(-3px); color: #ffffff; }
 
-        /* Footer & Colorful Social Links */
-        .footer {
-            background-color: #050505;
-            padding: 30px 10% 20px; /* Reduced top padding to move it up */
+        /* PROJECTS SECTION (NEW) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .project-icon { font-size: 2.5rem; color: #38bdf8; margin-bottom: 20px; }
+        .project-title { font-size: 1.5rem; color: #fff; margin-bottom: 10px; }
+        .project-desc { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .project-link { font-size: 0.9rem; padding: 8px 16px; }
+        .wa-link { background-color: #25D366; color: #fff; border: none; }
+        .wa-link:hover { background-color: #1ebe57; color: #fff; }
+
+        /* ACHIEVEMENTS SECTION (NEW) */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .achieve-box {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+            border: 1px solid rgba(255, 215, 0, 0.2); /* Gold subtle border */
+            padding: 30px 20px;
+            border-radius: 15px;
             text-align: center;
+            transition: transform 0.3s;
+        }
+        .achieve-box:hover { transform: scale(1.05); border-color: gold; }
+        .achieve-icon { font-size: 3rem; margin-bottom: 15px; }
+        .icon-silver { color: #C0C0C0; text-shadow: 0 0 15px rgba(192, 192, 192, 0.5); }
+        .icon-gold { color: #FFD700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+        .icon-blue { color: #38bdf8; }
+        .icon-red { color: #ff0000; }
+        .achieve-number { font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 5px; font-family: 'Poppins', sans-serif;}
+        .achieve-text { color: #cbd5e1; font-size: 0.95rem; }
+
+        /* Footer */
+        .footer {
+            background-color: #050505; padding: 30px 10% 20px; text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap; /* Ensures all icons stay in one line */
-            gap: 25px;
-            margin-top: -15px; /* Thoda upar khiskaya */
-            margin-bottom: 20px;
-        }
-        .social-icon {
-            font-size: 2.2rem; /* Thoda bada for Real Logo feel */
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        /* Real Brand Colors */
+        .social-links { display: flex; justify-content: center; flex-wrap: nowrap; gap: 25px; margin-top: -15px; margin-bottom: 20px; }
+        .social-icon { font-size: 2.2rem; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
         .social-icon.fb { color: #1877F2; }
-        .social-icon.insta { 
-            /* Real Instagram Gradient */
-            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .social-icon.insta { background: -webkit-linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .social-icon.tg { color: #229ED9; }
         .social-icon.yt { color: #FF0000; }
-
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1); /* Hover animation */
-            filter: drop-shadow(0 4px 8px rgba(255,255,255,0.1));
-        }
-        
-        .copyright {
-            color: #64748b;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-        }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); filter: drop-shadow(0 4px 8px rgba(255,255,255,0.1)); }
+        .copyright { color: #64748b; font-size: 0.95rem; }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                justify-content: center;
-                text-align: center;
-                padding: 120px 5% 50px;
+            .menu-btn { display: block; }
+            .nav-links {
+                position: fixed; top: 70px; left: -100%; width: 100%; height: auto;
+                background: rgba(10, 10, 10, 0.95); flex-direction: column; text-align: center;
+                padding: 30px 0; transition: 0.3s ease; border-bottom: 1px solid #333;
             }
-            .hero-content, .hero-image-container {
-                max-width: 100%;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .glass-card {
-                margin-bottom: 30px;
-            }
-            .name {
-                font-size: 1.6rem; 
-            }
-            .role {
-                font-size: 1.3rem;
-            }
-            section {
-                padding: 60px 5%;
-            }
-            .about-content {
-                text-align: center;
-                border-left: none;
-                border-top: 4px solid #38bdf8;
-            }
-            .social-links {
-                gap: 20px; /* Thoda gap adjust kiya mobile ke liye */
-            }
+            .nav-links.active { left: 0; }
+            .hero { flex-direction: column-reverse; justify-content: center; text-align: center; padding-top: 120px; }
+            .hero-content, .hero-image-container { max-width: 100%; }
+            .hero-buttons { justify-content: center; }
+            .glass-card { margin-bottom: 30px; }
+            .name { font-size: 1.6rem; }
+            .role { font-size: 1.3rem; }
+            section { padding: 80px 5%; }
+            .about-content { text-align: center; border-left: none; border-top: 4px solid #38bdf8; }
         }
     </style>
 </head>
 <body>
+
+    <!-- NAVBAR (NEW) -->
+    <nav class="navbar">
+        <a href="#home" class="nav-logo">MD AYUB <span>JANZ</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+        </ul>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
@@ -328,37 +278,114 @@
         </div>
     </section>
 
+    <!-- PROJECTS SECTION (NEW) -->
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <i class="fa-solid fa-graduation-cap project-icon"></i>
+                <h3 class="project-title">Janz Education</h3>
+                <p class="project-desc">A dedicated educational platform providing free resources, study materials, and guidance for students preparing for competitive exams.</p>
+                <a href="https://janzeducation.online" target="_blank" class="btn btn-secondary project-link">Visit Website</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <i class="fa-solid fa-blog project-icon"></i>
+                <h3 class="project-title">Janz Tales</h3>
+                <p class="project-desc">An SEO-optimized web platform and blog built to deliver engaging content and stories, integrated with modern web features.</p>
+                <a href="https://janztales.online" target="_blank" class="btn btn-secondary project-link">Visit Website</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <i class="fa-solid fa-palette project-icon"></i>
+                <h3 class="project-title">Janj Creative Studio</h3>
+                <p class="project-desc">A creative venture handling professional graphic design, branding, logo creation, and digital arts for businesses.</p>
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/919462983708" target="_blank" class="btn btn-primary project-link wa-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <i class="fa-solid fa-robot project-icon"></i>
+                <h3 class="project-title">JanzApp AI Messenger</h3>
+                <p class="project-desc">A smart messaging application utilizing Firebase for real-time database management and AI APIs for an enhanced chatting experience.</p>
+                <span class="btn btn-secondary project-link" style="border-color: #333; color: #666; cursor: not-allowed;">Under Development</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION (NEW) -->
+    <section id="achievements">
+        <h2 class="section-title">My <span>Achievements</span></h2>
+        <div class="achievements-grid">
+            <!-- Achievement 1 -->
+            <div class="achieve-box">
+                <i class="fa-brands fa-youtube achieve-icon icon-silver"></i>
+                <div class="achieve-number">Silver Play Button</div>
+                <div class="achieve-text">Official YouTube Creator Award</div>
+            </div>
+            <!-- Achievement 2 -->
+            <div class="achieve-box">
+                <i class="fa-solid fa-users achieve-icon icon-red"></i>
+                <div class="achieve-number">170K+</div>
+                <div class="achieve-text">Subscribers on Janz Verse</div>
+            </div>
+            <!-- Achievement 3 -->
+            <div class="achieve-box">
+                <i class="fa-solid fa-eye achieve-icon icon-blue"></i>
+                <div class="achieve-number">9.3M+</div>
+                <div class="achieve-text">Digital Video Views</div>
+            </div>
+            <!-- Achievement 4 -->
+            <div class="achieve-box">
+                <i class="fa-brands fa-google achieve-icon icon-gold"></i>
+                <div class="achieve-number">Google AI</div>
+                <div class="achieve-text">Recognized Profile & Founder</div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER SECTION -->
     <footer class="footer">
         <div class="social-links">
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/md.ayubjanj" target="_blank" class="social-icon fb" title="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <!-- Instagram -->
-            <a href="https://instagram.com/md_ayub_janj" target="_blank" class="social-icon insta" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <!-- Telegram (Link Empty) -->
-            <a href="#" target="_blank" class="social-icon tg" title="Telegram">
-                <i class="fa-brands fa-telegram"></i>
-            </a>
-            <!-- YouTube (Link Empty) -->
-            <a href="#" target="_blank" class="social-icon yt" title="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+            <a href="https://www.facebook.com/md.ayubjanj" target="_blank" class="social-icon fb" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/md_ayub_janj" target="_blank" class="social-icon insta" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" target="_blank" class="social-icon yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <p class="copyright">2026 &copy;MD AYUB JANZ All Rights Reserved</p>
     </footer>
 
-    <!-- Typing Animation JS -->
+    <!-- JS for Typing and Mobile Menu -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+        // Typing Animation
         var typed = new Typed(".typing-text", {
-            strings: ["Student.", "Web Developer.", "Founder of Janz Education."],
+            strings: ["Student.", "Web Developer.", "Founder of Janz Education.", "YouTuber."],
             typeSpeed: 60,
             backSpeed: 35,
             loop: true
+        });
+
+        // Mobile Navbar Toggle
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')){
+                menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'; // Change to X
+            } else {
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Change back to ☰
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
         });
     </script>
 
