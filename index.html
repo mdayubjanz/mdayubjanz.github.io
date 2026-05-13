@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags (Fast Indexing & SEO) -->
+    <title>Mohammad Ayub Janz | Web Developer & Founder of Janz Education</title>
+    <meta name="title" content="Mohammad Ayub Janz | MD AYUB JANZ - Web Developer">
+    <meta name="description" content="Official portfolio of Mohammad Ayub Janz (MD AYUB JANZ). Founder of Janz Education, a passionate web developer from Vadun Nadi, Bhata (Balotra), Rajasthan.">
+    <meta name="keywords" content="Mohammad Ayub Janz, MD AYUB JANZ, Janz Education, Web Developer Rajasthan, Vadun Nadi Bhata, JanzTales, SEO Expert, Student Portal Developer">
+    <meta name="author" content="Mohammad Ayub Janz">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mdayubjanz.github.io/">
+    <meta property="og:title" content="Mohammad Ayub Janz | Founder of Janz Education">
+    <meta property="og:description" content="Building digital platforms that help students learn better. Explore the portfolio and projects of Mohammad Ayub Janz.">
+    <!-- Using the specific image you referenced -->
+    <meta property="og:image" content="64160.jpg"> 
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mdayubjanz.github.io/">
+    <meta property="twitter:title" content="Mohammad Ayub Janz | Web Developer">
+    <meta property="twitter:description" content="Founder of Janz Education & passionate web developer from Vadun Nadi, Bhata (Balotra), Rajasthan.">
+    <meta property="twitter:image" content="64160.jpg">
+
+    <!-- Canonical & Robots (Crucial for Indexing) -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mdayubjanz.github.io/">
+
+    <!-- Premium Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- ALL CSS INCLUDED HERE -->
+    <style>
+        /* CSS Reset for Professional Look */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Premium Pitch Dark Background */
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section Layout */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 10%;
+            background: radial-gradient(circle at top left, #1e293b, #0a0a0a);
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .greeting {
+            color: #38bdf8; /* Light Blue */
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .role {
+            font-size: 1.8rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .typing-text {
+            color: #38bdf8; /* Highlight Color */
+        }
+
+        .bio {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #38bdf8;
+            color: #0a0a0a;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #38bdf8;
+            border: 2px solid #38bdf8;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(56, 189, 248, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Glassmorphism Image Card */
+        .hero-image-container {
+            max-width: 40%;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .profile-pic {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 15px;
+            display: block;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                padding: 50px 5%;
+            }
+            .hero-content, .hero-image-container {
+                max-width: 100%;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .glass-card {
+                margin-bottom: 30px;
+            }
+            .name {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML STRUCTURE STARTS HERE -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name">Mohammad Ayub Janz</h1>
+            <h2 class="role">And I'm a <span class="typing-text"></span></h2>
+            <p class="bio">
+                Based in Vadun Nadi, Bhata (Balotra), Rajasthan. Founder of Janz Education and a passionate Web Developer building digital platforms to help students learn better.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        
+        <div class="hero-image-container">
+            <div class="glass-card">
+                <!-- Image referenced from your search screenshot -->
+                <img src="64160.jpg" alt="Mohammad Ayub Janz" class="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Typing Animation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".typing-text", {
+            strings: ["Web Developer.", "Founder of Janz Education.", "SEO Expert.", "Student."],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+
+</body>
+  </html>
